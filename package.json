@@ -1,0 +1,23 @@
+{
+  "name": "justinepatoux-p3-ohmyfood",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justine-patoux/JustinePatoux-p3-ohmyfood.git"
+  },
+  "author": "Justine Patoux",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/justine-patoux/JustinePatoux-p3-ohmyfood/issues"
+  },
+  "homepage": "https://github.com/justine-patoux/JustinePatoux-p3-ohmyfood#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "sass": "^1.57.1"
+  }
+}

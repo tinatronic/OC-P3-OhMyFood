@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-body, h1 {
+body, h1, h3, p, figure {
   margin: 0;
 }
 
@@ -39,7 +39,7 @@ body {
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
   transition: transform 200ms;
 }
-.btn--gradient:active {
+.btn--gradient:hover {
   transform: scale(1.02);
   opacity: 0.9;
 }
@@ -52,7 +52,7 @@ body {
   height: 20vm;
   position: relative;
 }
-#header__title {
+#header__logo {
   font-size: 2.5rem;
 }
 
@@ -60,6 +60,7 @@ body {
   background-color: #EAEAEA;
   font-size: 1.1rem;
   font-weight: bold;
+  padding: 1.2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -90,7 +91,7 @@ body {
 }
 .specs h2 {
   margin-top: 1.2rem;
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: 900;
 }
 .specs__list {
@@ -150,23 +151,83 @@ body {
   left: 1.15rem;
 }
 
-#footer {
+.cards {
+  background-color: #F7F7F7;
+  padding: 2rem 1.5rem;
+}
+.cards h2 {
+  font-size: 1.7rem;
+  font-weight: 900;
+}
+.cards__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.cards__wrapper a .card {
+  border-radius: 1rem;
+  min-width: 100%;
+  height: 15rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+@media (min-width: 992px) {
+  .cards__wrapper a .card {
+    width: 40%;
+  }
+}
+.cards__wrapper a .card__img {
+  width: 100%;
+  height: 70%;
+  border-radius: 1rem 1rem 0 0;
+  vertical-align: middle;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.cards__wrapper a .card .new {
+  background-color: #99E2D0;
+  border-radius: 0.2rem;
+  color: green;
+  letter-spacing: 0 0.2rem;
+  padding: 0.5rem 1rem;
+  place-content: center;
+  font-weight: bold;
+  position: absolute;
+  right: 1rem;
+  top: 2rem;
+}
+.cards__wrapper a .card__desc {
+  background-color: #FFF;
+  height: 30%;
+  border-radius: 0 0 1rem 1rem;
+  padding: 1rem 0.8rem;
+  line-height: 1.2rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+.cards__wrapper a .card__desc i {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+}
+
+.footer {
   background-color: #353535;
   color: #FFF;
   padding: 1.5rem;
 }
-#footer h2 {
+.footer h2 {
   font-size: 1.2rem;
   font-family: "Shrikhand", cursive;
   letter-spacing: 0.1rem;
   margin-top: 0;
 }
-#footer__menu {
+.footer__menu {
   font-size: 1.2rem;
 }
-#footer__menu .footer__item {
+.footer__menu__item {
   padding: 0.2rem 0;
 }
-#footer__menu i {
+.footer__menu i {
   margin-right: 0.9rem;
 }/*# sourceMappingURL=style.css.map */

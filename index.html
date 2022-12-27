@@ -1,45 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Ohmyfood! Paris - Réservez en ligne</title>
-        <link href="sass/style.css" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
-    </head>
-    <body>
-        <header id="header">
-            <h1 id="header__title">ohmyfood</h1>
-        </header>
-        <main>
-            <!-- Localisation -->
-            <section id="location">
-                <i class="fa-solid fa-location-dot fa-lg"></i><p>Paris, Belleville</p>
-            </section>
-            <!-- Explorer -->
-            <section id="search">
-                <h2>Réservez le menu qui vous convient</h2>
-                <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
-                <button class="btn--gradient">Explorer nos restaurants</button>
-            </section>
-            <!-- Specifications -->
-            <section class="specs">
-                <h2>Fonctionnement</h2>
-                <ol class="specs__list">
-                    <li class="specs__items"><i class="fa-solid fa-mobile-screen-button fa-lg"></i></i>Choisissez un restaurant</li>
-                    <li class="specs__items"><i class="fa-solid fa-list fa-lg"></i>Composez votre menu</li>
-                    <li class="specs__items"><i class="fa-solid fa-store fa-lg"></i>Dégustez au restaurant</li>
-                </ol>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ohmyfood! Paris - Réservez en ligne</title>
+    <link href="sass/style.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header id="header">
+        <h1 id="header__logo">ohmyfood</h1>
+    </header>
+    <main class="container">
+        <!-- Localisation Paris Belleville -->
+        <section id="location">
+            <i class="fa-solid fa-location-dot fa-lg"></i><p>Paris, Belleville</p>
+        </section>
+        <!-- Explorer -->
+        <section id="search">
+            <h2>Réservez le menu qui vous convient</h2>
+            <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
+            <button class="btn--gradient">Explorer nos restaurants</button>
+        </section>
+        <!-- Specifications -->
+        <section class="specs">
+            <h2>Fonctionnement</h2>
+            <!-- Liste des étapes -->
+            <ol class="specs__list">
+                <li class="specs__items"><i class="fa-solid fa-mobile-screen-button fa-lg"></i></i>Choisissez un restaurant</li>
+                <li class="specs__items"><i class="fa-solid fa-list fa-lg"></i>Composez votre menu</li>
+                <li class="specs__items"><i class="fa-solid fa-store fa-lg"></i>Dégustez au restaurant</li>
+            </ol>
+        </section>
+        <section class="cards">
+            <h2>Restaurants</h2>
+            <div class="cards__wrapper">
+                <!-- La palette du goût -->
+                <a href="#"><figure class="card">
+                    <img class="card__img" src="img/la-palette-du-gout.jpg">
+                    <span class="new">Nouveau</span>
+                    <figcaption class="card__desc">
+                        <h3>La palette du goût</h3>
+                        <p>Ménilmontant</p>
+                        <i class="fa-regular fa-heart fa-lg"></i>
+                    </figcaption>
+                </figure></a>
+                <!-- La note enchantée -->
+                <a href="#"><figure class="card">
+                    <img class="card__img" src="img/la-note-enchantee.jpg">
+                    <span class="new">Nouveau</span>
+                    <figcaption class="card__desc">
+                        <h3>La note enchantée</h3>
+                        <p>Charonne</p>
+                        <i class="fa-regular fa-heart fa-lg"></i>
+                    </figcaption>
+                </figure></a>
+                <!-- A la française -->
+                <a href="#"><figure class="card">
+                    <img class="card__img" src="img/a-la-francaise.jpg">
+                    <figcaption class="card__desc">
+                        <h3>À la française</h3>
+                        <p>Cité Rouge</p>
+                        <i class="fa-regular fa-heart fa-lg"></i>
+                    </figcaption>
+                </figure></a>
+                <!-- Le délice des sens -->
+                <a href="#"><figure class="card">
+                    <img class="card__img" src="img/le-delice-des-sens.jpg">
+                    <figcaption class="card__desc">
+                        <h3>Le délice des sens</h3>
+                        <p>Folie-Méricourt</p>
+                        <i class="fa-regular fa-heart fa-lg"></i>
+                    </figcaption>
+                </figure></a>
+            </div>
             </section>
         </main>
-        <footer id="footer">
+        <!-- Footer -->
+        <footer class="footer">
             <h2>ohmyfood</h2>
-            <nav id="footer__menu">
-                <li class="footer__item"><i class="fa-solid fa-utensils fa-xs"></i> <a href="#">Proposer un restaurant</a></li>
-                <li class="footer__item"><i class="fa-solid fa-handshake-angle fa-xs"></i></i><a href="#">Devenir partenaire</a></li>
+            <!-- Navbar -->
+            <nav class="footer__menu">
+                <li class="footer__item"><i class="fa-solid fa-utensils fa-xs"></i><a href="#">Proposer un restaurant</a></li>
+                <li class="footer__item"><i class="fa-solid fa-handshake-angle fa-2xs"></i></i><a href="#">Devenir partenaire</a></li>
                 <li class="footer__item"><a href="#">Mention légales</a></li>
                 <li class="footer__item"><a href="mailto:contact.omfparis@omyfood.com">Contact</a></li>
             </nav>
         </footer>
     </body>
-</html>
+    </html>

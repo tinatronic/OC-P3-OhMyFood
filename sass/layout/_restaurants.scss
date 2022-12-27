@@ -1,0 +1,64 @@
+.cards {
+    background-color: $search-background;
+    padding: 2rem 1.5rem;
+    
+    h2 {
+        font-size: 1.7rem;
+        font-weight: 900;
+    }
+    
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        
+        a .card {
+            border-radius: 1rem;
+            min-width: 100%;
+            height: 15rem;
+            box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
+            position: relative;
+            
+            @media(min-width: 992px) {
+                width: 40%;
+            }
+            
+            &__img {
+                width: 100%;
+                height: 70%;
+                border-radius: 1rem 1rem 0 0;
+                vertical-align: middle;
+                object-fit: cover;
+            }
+            
+            .new {
+                background-color: $terciary-color;
+                border-radius: 0.2rem;
+                color: green;
+                letter-spacing: 0.0.2rem;
+                padding: 0.5rem 1rem;
+                place-content: center;
+                font-weight: bold;
+                position: absolute;
+                right: 1rem;
+                top: 2rem;
+            }
+            
+            &__desc {
+                background-color: #FFF;
+                height: 30%;
+                border-radius: 0 0 1rem 1rem;
+                padding: 1rem 0.8rem;
+                line-height: 1.2rem;
+                box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
+                position: relative;
+                
+                i {
+                    position: absolute;
+                    top: 1.5rem;
+                    right: 2rem;
+                }
+            }
+        }
+    } 
+}

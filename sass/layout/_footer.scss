@@ -1,4 +1,4 @@
-#footer {
+.footer {
     background-color: #353535;
     color: #FFF;
     padding: 1.5rem;
@@ -13,7 +13,7 @@
     &__menu {
         font-size: 1.2rem;
 
-        .footer__item {
+        &__item {
             padding: 0.2rem 0;
         }
         i {

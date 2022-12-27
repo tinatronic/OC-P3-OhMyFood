@@ -9,8 +9,12 @@ body, h1 {
   margin: 0;
 }
 
+ol, ul {
+  padding-left: 0;
+}
+
 li {
-  list-style: none;
+  list-style-type: none;
 }
 
 a {
@@ -32,11 +36,16 @@ body {
   border-radius: 100px;
   cursor: pointer;
   background-image: linear-gradient(#FF79DA, #9356DC);
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  transition: transform 200ms;
+}
+.btn--gradient:active {
+  transform: scale(1.02);
+  opacity: 0.9;
 }
 
 #header {
   font-family: "Shrikhand", cursive;
-  font-size: 3rem;
   text-align: center;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
   padding: 1.5rem;
@@ -61,15 +70,85 @@ body {
 #search {
   background-color: #F7F7F7;
   text-align: center;
-  padding: 2rem 0 6rem 0;
+  padding: 3rem 2rem 5rem 2rem;
 }
 #search h2 {
-  font-size: 2rem;
+  margin-top: 0;
+  font-size: 1.7rem;
   font-weight: 900;
 }
 #search p {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   margin-bottom: 2.8rem;
+}
+
+body {
+  counter-reset: order;
+}
+
+.specs {
+  padding: 2rem;
+}
+.specs h2 {
+  margin-top: 1.2rem;
+  font-size: 2rem;
+  font-weight: 900;
+}
+.specs__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+@media (min-width: 992px) {
+  .specs__list {
+    flex-direction: row;
+  }
+}
+.specs__items {
+  background-color: #F6F6F6;
+  padding: 2rem 2rem 2rem 3rem;
+  border-radius: 1rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+}
+@media (min-width: 992px) {
+  .specs__items {
+    width: 30%;
+  }
+}
+.specs__items i {
+  margin-right: 2rem;
+  color: #7F7F7F;
+  width: 16px;
+}
+.specs__items:hover {
+  background-color: #F4EDFE;
+}
+.specs__items:hover i {
+  color: #9356DC;
+}
+.specs__items:active {
+  background-color: #F4EDFE;
+}
+.specs__items:active i {
+  color: #9356DC;
+}
+.specs__items:hover {
+  background-color: #F4EDFE;
+}
+.specs__items:before {
+  content: counter(order);
+  counter-increment: order;
+  color: #fff;
+  background-color: #9356DC;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  position: absolute;
+  left: 1rem;
 }
 
 #footer {

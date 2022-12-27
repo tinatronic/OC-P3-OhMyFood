@@ -1,15 +1,16 @@
 #search {
     background-color: $search-background;
     text-align: center;
-    padding: 2rem 0 6rem 0;
+    padding: 3rem 2rem 5rem 2rem;
 
     h2 {
-        font-size: 2rem;
+        margin-top: 0;
+        font-size: 1.7rem;
         font-weight: 900;
     }
 
     p {
-        font-size: 1.5rem;
+        font-size: 1.1rem;
         margin-bottom: 2.8rem;
     }
 }

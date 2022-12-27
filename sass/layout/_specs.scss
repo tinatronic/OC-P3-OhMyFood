@@ -23,7 +23,7 @@ body {
 
     &__items {
         background-color: #F6F6F6;
-        padding: 2rem 2rem 2rem 3rem;
+        padding: 1.6rem 3rem;
         border-radius: 1rem;
         font-weight: bold;
         font-size: 1.1rem;
@@ -65,13 +65,13 @@ body {
             counter-increment: order;
             color: #fff;
             background-color: $primary-color;
-            width: 2rem;
-            height: 2rem;
+            width: 1.55rem;
+            height: 1.55rem;
             display: grid;
             place-items: center;
             border-radius: 50%;
             position: absolute;
-            left: 1rem;
+            left: 1.15rem;
         }    
     }
 }

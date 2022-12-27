@@ -1,0 +1,10 @@
+.btn--gradient {
+    border: 0;
+    padding: 1.3rem 1.5rem;
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #FFF;
+    border-radius: 100px;
+    cursor: pointer;
+    background-image: linear-gradient($secondary-color, $primary-color);
+}

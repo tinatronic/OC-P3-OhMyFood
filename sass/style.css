@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&family=Shrikhand&display=swap");
 *,
 ::before,
 ::after {
@@ -16,10 +16,22 @@ li {
 a {
   color: inherit;
   text-decoration: none;
+  cursor: pointer;
 }
 
 body {
   font-family: "Roboto", sans-serif;
+}
+
+.btn--gradient {
+  border: 0;
+  padding: 1.3rem 1.5rem;
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #FFF;
+  border-radius: 100px;
+  cursor: pointer;
+  background-image: linear-gradient(#FF79DA, #9356DC);
 }
 
 #header {
@@ -44,6 +56,20 @@ body {
   align-items: center;
   justify-content: center;
   gap: 1.1rem;
+}
+
+#search {
+  background-color: #F7F7F7;
+  text-align: center;
+  padding: 2rem 0 6rem 0;
+}
+#search h2 {
+  font-size: 2rem;
+  font-weight: 900;
+}
+#search p {
+  font-size: 1.5rem;
+  margin-bottom: 2.8rem;
 }
 
 #footer {

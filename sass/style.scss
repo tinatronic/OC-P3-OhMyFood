@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&family=Shrikhand&display=swap');
 
-@import 'abstracts/variables';
+@import 'abstracts/mixins.scss';
+@import 'abstracts/variables.scss';
 
-@import 'base/_reset';
+@import 'base/_reset.scss';
 @import 'base/typoraphy.scss';
 
 @import 'components/_buttons.scss';
@@ -13,4 +14,5 @@
 @import 'layout/_search.scss';
 @import 'layout/_specs.scss';
 @import 'layout/restaurants.scss';
+@import 'layout/menu.scss';
 @import 'layout/_footer.scss';

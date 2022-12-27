@@ -1,6 +1,6 @@
 .cards {
     background-color: $search-background;
-    padding: 2rem 1.5rem;
+    padding: 2rem;
     
     h2 {
         font-size: 1.7rem;
@@ -9,19 +9,16 @@
     
     &__wrapper {
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
         gap: 1.5rem;
         
         a .card {
+            flex-grow: 1;
             border-radius: 1rem;
-            min-width: 100%;
+            min-width: 30rem;
             height: 15rem;
             box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
             position: relative;
-            
-            @media(min-width: 992px) {
-                width: 40%;
-            }
             
             &__img {
                 width: 100%;
@@ -55,8 +52,23 @@
                 
                 i {
                     position: absolute;
-                    top: 1.5rem;
+                    top: 50%;
                     right: 2rem;
+                    transform: translateY(-50%);
+                }
+                
+                .fas {
+                    color: transparent;
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    opacity: 0;
+                    transition: all 200ms ease-in-out;
+                    @include gradient;
+
+                    &:hover .fas {
+                        opacity: 1;
+                        transform: translateY(-50%) scale(1.2);
+                    }
                 }
             }
         }

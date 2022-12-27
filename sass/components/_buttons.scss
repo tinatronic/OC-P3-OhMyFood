@@ -6,9 +6,9 @@
     color: #FFF;
     border-radius: 100px;
     cursor: pointer;
-    background-image: linear-gradient($secondary-color, $primary-color);
     box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
     transition: transform 200ms;
+    @include gradient;
 
     &:hover {
         transform: scale(1.02);

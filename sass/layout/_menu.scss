@@ -1,3 +1,9 @@
+.previous {
+    position: absolute;
+    left: 2rem;
+    top: 40%;
+}
+
 .banner {
     width: 100%;
     height: 40vh;
@@ -10,6 +16,14 @@
     border-radius: 2.5rem 2.5rem 0 0;
     margin-top: -2.5rem;
     position: relative;
+
+    .validate {
+        height: 20vh;
+        display: flex;
+        place-content: center;
+        align-items: center;
+        margin-bottom: 3.5rem;
+    }
     
     .title {
         display: flex;

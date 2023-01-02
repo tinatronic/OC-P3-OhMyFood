@@ -1,6 +1,14 @@
+@mixin general-padding {
+    padding: 2.5rem 1rem;
+}
+
 @mixin gradient {
     background-image: linear-gradient(
         to top,
         $secondary-color,
         $primary-color);
+}
+
+@mixin box-shadow {
+    box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
 }

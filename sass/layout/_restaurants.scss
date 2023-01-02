@@ -1,22 +1,17 @@
 .cards {
     background-color: $search-background;
-    padding: 2rem;
-    
-    h2 {
-        font-size: 1.7rem;
-        font-weight: 900;
-    }
+    @include general-padding;
     
     &__wrapper {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
+        display: grid;
+        column-gap: 2rem;
+        row-gap: 2rem;
         
         a .card {
             border-radius: 1rem;
             height: 15rem;
-            box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
             position: relative;
+            @include box-shadow;
             
             &__img {
                 width: 100%;
@@ -24,19 +19,19 @@
                 border-radius: 1rem 1rem 0 0;
                 vertical-align: middle;
                 object-fit: cover;
+                object-position: 50% 50%;
             }
             
             .new {
                 background-color: $terciary-color;
                 border-radius: 0.2rem;
-                color: green;
-                letter-spacing: 0.0.2rem;
+                color: darken($terciary-color, 40%);
                 padding: 0.5rem 1rem;
                 place-content: center;
                 font-weight: bold;
                 position: absolute;
-                right: 1rem;
-                top: 2rem;
+                top: 10%;
+                right: 2rem;
             }
             
             &__desc {
@@ -54,24 +49,6 @@
                     top: 50%;
                     right: 2rem;
                     transform: translateY(-50%);
-                }
-                
-                .fas {
-                    color: transparent;
-                    background-image: (red, blue);
-                    background-clip: text;
-                    -webkit-background-clip: text;
-
-                    &:hover {
-                        opacity: 1;
-                        transform: translateY(-50%) scale(1.2);
-                        background-clip: text;
-                        -webclip-background-clip: text;
-                        color: red;
-                        transition: background-image 200ms ease-in-out;
-                        transition: color 200ms ease-in-out;
-                        @include gradient;
-                    }
                 }
             }
         }

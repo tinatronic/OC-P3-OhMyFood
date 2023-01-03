@@ -12,15 +12,16 @@ body {
     @include general-padding;
 
     &__list {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        gap: 1.5rem;
+        @media (min-width: 1024px) {
+            display: flex;
+            gap: 1.5rem;
+        }
     }
 
     &__item {
         background-color: #F6F6F6;
         padding: 1.5rem 2rem;
+        margin-bottom: 1rem;
         border-radius: 1.2rem;
         font-weight: bold;
         position: relative;
@@ -28,15 +29,18 @@ body {
 
         @media (min-width: 1024px) {
             flex: 1;
+            margin-bottom: 0;
         }
 
         & i {
+            width: 16px;
+            font-size: 1rem;
             margin-right: 1rem;
             color: #7F7F7F;
         }
 
         &:hover {
-            background-color: #F4EDFE;
+            background-color: lighten($primary-color, 50%);
 
             i {
                 color: $primary-color;
@@ -44,7 +48,7 @@ body {
         }
 
         &:active {
-            background-color: #F4EDFE;
+            background-color: lighten($primary-color, 50%);
 
             i {
                 color: $primary-color;

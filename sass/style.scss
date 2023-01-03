@@ -2,6 +2,7 @@
 
 @import 'abstracts/mixins.scss';
 @import 'abstracts/variables.scss';
+@import 'abstracts/animations.scss';
 
 @import 'base/_reset.scss';
 @import 'base/typoraphy.scss';
@@ -13,6 +14,6 @@
 @import 'layout/_location.scss';
 @import 'layout/_search.scss';
 @import 'layout/_specs.scss';
-@import 'layout/restaurants.scss';
-@import 'layout/menu.scss';
+@import 'layout/_restaurants.scss';
+@import 'layout/_menu.scss';
 @import 'layout/_footer.scss';

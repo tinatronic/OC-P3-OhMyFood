@@ -4,8 +4,13 @@
     
     &__wrapper {
         display: grid;
+        grid-template-columns: repeat(1, 1fr);
         column-gap: 2rem;
         row-gap: 2rem;
+
+        @media (min-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
         
         a .card {
             border-radius: 1rem;
@@ -40,7 +45,6 @@
                 border-radius: 0 0 1rem 1rem;
                 padding: 1rem 0.8rem;
                 line-height: 1.2rem;
-                box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
                 position: relative;
                 
                 i {

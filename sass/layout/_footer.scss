@@ -10,16 +10,21 @@
     }
 
     &__menu {
-        font-size: 1.1rem; 
+        font-size: 1.1rem;
+
+        @media (min-width: 768px) {
+            display: flex;
+            gap: 3.6rem;
+        }
     }
 
     &__item {
         margin-bottom: 0.3rem;
 
         i {
-            width: 14px;
-            font-size: 1rem;
-            margin-right: 1rem;
+            width: 12px;
+            font-size: 0.8rem;
+            margin-right: 0.8rem;
         }
     }
 }

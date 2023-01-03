@@ -93,7 +93,7 @@ body {
 .specs {
   padding: 2.5rem 1rem;
 }
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
   .specs__list {
     display: flex;
     gap: 1.5rem;
@@ -108,7 +108,7 @@ body {
   position: relative;
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.13);
 }
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
   .specs__item {
     flex: 1;
     margin-bottom: 0;
@@ -156,9 +156,15 @@ body {
 }
 .cards__wrapper {
   display: grid;
+  grid-template-columns: repeat(1, 1fr);
   -moz-column-gap: 2rem;
        column-gap: 2rem;
   row-gap: 2rem;
+}
+@media (min-width: 768px) {
+  .cards__wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 .cards__wrapper a .card {
   border-radius: 1rem;
@@ -193,7 +199,6 @@ body {
   border-radius: 0 0 1rem 1rem;
   padding: 1rem 0.8rem;
   line-height: 1.2rem;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
   position: relative;
 }
 .cards__wrapper a .card__desc i {
@@ -308,11 +313,17 @@ body {
 .footer__menu {
   font-size: 1.1rem;
 }
+@media (min-width: 768px) {
+  .footer__menu {
+    display: flex;
+    gap: 3.6rem;
+  }
+}
 .footer__item {
   margin-bottom: 0.3rem;
 }
 .footer__item i {
-  width: 14px;
-  font-size: 1rem;
-  margin-right: 1rem;
+  width: 12px;
+  font-size: 0.8rem;
+  margin-right: 0.8rem;
 }/*# sourceMappingURL=style.css.map */

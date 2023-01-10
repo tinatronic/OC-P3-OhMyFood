@@ -30,6 +30,7 @@
     }
 }
 
+// Animation d'apparition des éléments de la liste des menus
 @keyframes menuAppear {
     0% {
         transform: translateY(50%);
@@ -38,5 +39,15 @@
     100% {
         transform: translateY(0);
         opacity: 1;
+    }
+}
+
+// Animation de l'icône check des pages de menus
+@keyframes spinCheck {
+    0% {
+        transform: rotate(359deg);
+    }
+    100% {
+        transform: rotate(0deg);
     }
 }

@@ -72,11 +72,15 @@
     }    
 }
 
-.menu__item {   
+.menu__item {
+    cursor: pointer;
     background-color: #FFF;
     border-radius: 1rem;
-    padding: 0.8rem 1rem;
+    //padding: 0.8rem 1rem;
     margin-bottom: 1rem;
+    display: flex;
+    overflow: hidden;
+    justify-content: space-between;
     animation: menuAppear 1s;
     @for $i from 1 through 3 {
         &:nth-child(#{$i}) {
@@ -88,6 +92,11 @@
     h4 {
         font-size: 1.1rem;
         margin-bottom: 0.2rem;
+    }
+
+    &--col {
+        flex-direction: column;
+        padding: 0.8rem 1rem;
     }
     
     &--flex {
@@ -104,7 +113,31 @@
         
         .price {
             font-weight: bold;
-            margin-right: 0.5rem;
+            margin-right: 1rem;
+            margin-top: 2.3rem;
+        }
+    }
+    .meal-selec {
+        background-color: $terciary-color;
+        color: #FFF;
+        border-radius: 0 1rem 1rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 1rem;
+        margin-right: -5rem;
+        width: 4rem;
+        height: 4.3rem;
+        padding: 0;
+        transition: all 0.5s;
+    }
+
+    &:hover .meal-selec {
+        margin-left: 0;
+        margin-right: 0;
+
+        i {
+            animation: spinCheck 0.5s;
         }
     }
 }           

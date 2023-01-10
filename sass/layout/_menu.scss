@@ -72,11 +72,17 @@
     }    
 }
 
-.menu__item {
+.menu__item {   
     background-color: #FFF;
     border-radius: 1rem;
     padding: 0.8rem 1rem;
     margin-bottom: 1rem;
+    animation: menuAppear 1s;
+    @for $i from 1 through 3 {
+        &:nth-child(#{$i}) {
+            animation-delay: 100ms * $i;
+        }
+    }
     @include box-shadow;
     
     h4 {

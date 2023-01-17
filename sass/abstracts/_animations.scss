@@ -1,37 +1,9 @@
-.loader {
-    background-color: #FFF;
-    position: fixed;
-    inset: 0;
-    height: 100vh;
-    z-index: 1;
-    opacity: 0.9;
-    animation: fadeOut 3s;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-out;
-    animation-fill-mode: forwards;
-
-    i {
-        position: absolute;
-        color: darken($primary-color, 30%);
-        top: 50%;
-        left: 48%;
-    }
-}
-
 // Animation du loader
  @keyframes fadeOut {
-     0% {
-         opacity: 0.9;
-     }
-
-     50% {
-        opacity: 0.9;
-     }
-
-     100% {
-         opacity: 0;
-         z-index: -1;
-     }
+    100% {
+        opacity: 0;
+        z-index: 0;
+      }
  }
 
 // Animation d'apparition des éléments de la liste des menus

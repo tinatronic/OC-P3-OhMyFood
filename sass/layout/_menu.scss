@@ -1,3 +1,4 @@
+// Bouton flèche précédent
 .previous {
     position: absolute;
     left: 2rem;
@@ -49,11 +50,11 @@
     
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    column-gap: 2rem;
-    row-gap: 2rem;
+    row-gap: 1rem;
     
     @media (min-width: 768px) {
-         grid-template-columns: repeat(3, 1fr);
+         grid-template-columns: repeat(1, 1fr);
+         column-gap: 1rem;
     }
     
     h3 {
@@ -73,14 +74,13 @@
 }
 
 .menu__item {
+    max-width: 100%;
     cursor: pointer;
     background-color: #FFF;
     border-radius: 1rem;
-    //padding: 0.8rem 1rem;
     margin-bottom: 1rem;
     display: flex;
     overflow: hidden;
-    white-space: nowrap;
     justify-content: space-between;
     animation: menuAppear 1s;
     @for $i from 1 through 3 {
@@ -88,26 +88,32 @@
             animation-delay: 100ms * $i;
         }
     }
-    @include box-shadow;
-    
-    h4 {
-        font-size: 1.1rem;
-        margin-bottom: 0.2rem;
-    }
+    @include box-shadow;   
 
     &--col {
         flex-direction: column;
         padding: 0.8rem 1rem;
+
+        h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.2rem;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        .meal-desc {
+            font-size: 1rem;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
     }
     
     &--flex {
         display: flex;
         justify-content: space-between;
-        
-        .meal-desc {
-            font-size: 1rem;
-            width: 80%;
-        }
+        min-width: 0;   
         
         .price {
             font-weight: bold;

@@ -8,6 +8,57 @@ body {
     margin: auto; 
 }
 
+.loader {
+    background-color: #FFF;
+    position: fixed;
+    inset: 0;
+    height: 100vh;
+    z-index: 1;
+    opacity: 0.9;
+    animation: fadeOut 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+
+    i {
+        position: absolute;
+        color: darken($primary-color, 30%);
+        top: 50%;
+        left: 48%;
+    }
+}
+
+// Paris, Belleville
+#location {
+    background-color: #EAEAEA;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.3rem;
+}
+
+// Explorer nos restaurants
+#search {
+    background-color: $search-background;
+    text-align: center;
+    @include general-padding;
+
+    h2 {
+        margin-top: 0;
+        font-size: 1.7rem;
+        font-weight: 900;
+    }
+
+    p {
+        font-size: 1.2rem;
+        margin-bottom: 2.8rem;
+    }
+}
+
+// Guide d'utilisation de l'application
 .specs {
     @include general-padding;
 
@@ -60,6 +111,7 @@ body {
 
         }
 
+        // Incrémentation des numéros de la liste
         &:before {
             content: counter(order) "";
             counter-increment: order;

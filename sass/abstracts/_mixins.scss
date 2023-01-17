@@ -12,3 +12,20 @@
 @mixin box-shadow {
     box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
 }
+
+@mixin heart {
+    i {
+        //linear gradient on fontawesome icon
+        background: -webkit-linear-gradient(bottom, $secondary-color 0%, $secondary-color 50%, $primary-color 50%, $primary-color 100%);     
+        background-clip: text;              
+        -webkit-text-fill-color: transparent;
+        
+        // colors position
+        background-size: 100% 200%;
+        transition: background-position 0.3s;
+      }
+        // hover animation
+      i:hover {
+          background-position: 0 100%;
+      };
+}

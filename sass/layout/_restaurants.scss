@@ -50,27 +50,16 @@
                 h3 {
                     margin: -0.2rem 0 0.4rem 0;
                 }
-                
+
                 i {
                     font-size: 2rem;
                     position: absolute;
                     top: 50%;
                     right: 2rem;
-                    color: black;
-                    
-                    &:before {
-                        color: inherit;
-                    }
-
-                    &:hover::before {
-                        font-weight: 900;
-                        background-clip: text;
-                        background-image: linear-gradient($primary-color, $secondary-color);
-                        color: transparent;
-                        transform: translateY(-50%) scale(1.1);
-                        transition: all 200ms ease-in-out;
-                    }
                 }
+                
+
+                @include heart;       
             }
         }
     } 

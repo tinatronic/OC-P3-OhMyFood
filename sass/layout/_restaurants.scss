@@ -51,25 +51,24 @@
                     margin: -0.2rem 0 0.4rem 0;
                 }
                 
-                i {
-                    font-size: 2rem;
-                    position: absolute;
-                    top: 50%;
-                    right: 2rem;
-                    
-                    &:before {
-                        background: -webkit-linear-gradient(bottom, $secondary-color 0%, $secondary-color 50%, $primary-color 50%, $primary-color 100%);     
-                        background-clip: text;                     
-                        -webkit-text-fill-color: transparent;
-                        font-weight: 900;
-                        background-size: 100% 200%;
-                        transition: background-position 0.3s;
-                    }
-                    
-                    &:hover::before {
-                        background-position: 0 100%;
-                    }
+                i:before {
+                    @include heart;
                 }
+                
+                i:after {
+                    @include heart;
+                    @include gradient;
+                    color: transparent;
+                    opacity: 0;
+                    font-weight: 900;
+                    line-height: 1;
+                }
+
+                i:hover::after {
+                    opacity: 1;
+                }
+
+                
                 
             }
         }

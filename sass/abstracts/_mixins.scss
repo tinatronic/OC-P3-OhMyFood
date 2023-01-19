@@ -4,11 +4,31 @@
 
 @mixin gradient {
     background-image: linear-gradient(
-        to top,
-        $secondary-color,
-        $primary-color);
+    to top,
+    $secondary-color,
+    $primary-color);
 }
 
 @mixin box-shadow {
     box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
+}
+
+@mixin heart {
+    content: "\f004";
+    display: inline-block;
+    font-style: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 400;
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    color: black;
+    background-clip: text;
+    -webkit-background-clip: text;
+    opacity: 1;
+    transform: translateY(-50%);
+    transition: all 200ms ease-in-out;
 }

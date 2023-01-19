@@ -274,23 +274,51 @@ body {
 .cards__wrapper a .card__desc h3 {
   margin: -0.2rem 0 0.4rem 0;
 }
-.cards__wrapper a .card__desc i {
+.cards__wrapper a .card__desc i:before {
+  content: "\f004";
+  display: inline-block;
+  font-style: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
   font-size: 2rem;
   position: absolute;
   top: 50%;
   right: 2rem;
-}
-.cards__wrapper a .card__desc i:before {
-  background: -webkit-linear-gradient(bottom, #FF79DA 0%, #FF79DA 50%, #9356DC 50%, #9356DC 100%);
+  color: black;
+  background-clip: text;
   -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 900;
-  background-size: 100% 200%;
-  transition: background-position 0.3s;
+  opacity: 1;
+  transform: translateY(-50%);
+  transition: all 200ms ease-in-out;
 }
-.cards__wrapper a .card__desc i:hover::before {
-  background-position: 0 100%;
+.cards__wrapper a .card__desc i:after {
+  content: "\f004";
+  display: inline-block;
+  font-style: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+  font-size: 2rem;
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  color: black;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 1;
+  transform: translateY(-50%);
+  transition: all 200ms ease-in-out;
+  background-image: linear-gradient(to top, #FF79DA, #9356DC);
+  color: transparent;
+  opacity: 0;
+  font-weight: 900;
+  line-height: 1;
+}
+.cards__wrapper a .card__desc i:hover::after {
+  opacity: 1;
 }
 
 .previous {

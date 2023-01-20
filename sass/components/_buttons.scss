@@ -11,6 +11,7 @@
     @include gradient;
 
     &:hover {
+        box-shadow: 0 0 0.5rem rgb(0 0 0 / 50%);
         transform: scale(1.02);
         opacity: 0.9;
     }

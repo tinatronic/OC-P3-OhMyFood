@@ -12,25 +12,27 @@
     object-position: 50% 50%;
 }
 
-.container__menu {
+.container-menu {
     border-radius: 2rem 2rem 0 0;
     margin-top: -2rem;
     position: relative;
     background-color: #F7f7f7;
+    
+    .validate {
+        display: flex;
+        place-content: center;
+        align-items: center;
+    }
 }
 
-.menu__btn {
-    height: 20vh;
-    display: flex;
-    place-content: center;
-    align-items: center;
+.title, .menu {
+    @include general-padding;
 }
 
 .title {
     display: flex;
     position: relative;
     align-content: center;
-    @include general-padding;
     
     h2 {
         font-size: 1.5rem;
@@ -38,23 +40,35 @@
         margin: 0;
     }
     
-    i {
-        position: absolute;
-        right: 3rem;
-        top: 50%;
+    i:before {
+        @include heart;
+    }
+    
+    i:after {
+        @include heart;
+        @include gradient;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+        opacity: 0;
+        font-weight: 900;
+        line-height: 1;
+        transition: all 300ms ease-in-out;
+    }
+    
+    i:hover::after {
+        opacity: 1;
     }
 }
 
 .menu {
-    @include general-padding;
-    
+    max-width: 100%;
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 1fr);   
     row-gap: 1rem;
     
-    @media (min-width: 768px) {
-         grid-template-columns: repeat(1, 1fr);
-         column-gap: 1rem;
+    @media (min-width: 1024px) {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1rem;
     }
     
     h3 {
@@ -70,78 +84,147 @@
             margin-top: 0.3rem;
             width: 2.5rem;
         }
-    }    
-}
-
-.menu__item {
-    max-width: 100%;
-    cursor: pointer;
-    background-color: #FFF;
-    border-radius: 1rem;
-    margin-bottom: 1rem;
-    display: flex;
-    overflow: hidden;
-    justify-content: space-between;
-    animation: menuAppear 1s;
-    @for $i from 1 through 3 {
-        &:nth-child(#{$i}) {
-            animation-delay: 100ms * $i;
-        }
-    }
-    @include box-shadow;   
-
-    &--col {
-        flex-direction: column;
-        padding: 0.8rem 1rem;
-
-        h4 {
-            font-size: 1.1rem;
-            margin-bottom: 0.2rem;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            overflow: hidden;
-        }
-
-        .meal-desc {
-            font-size: 1rem;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            overflow: hidden;
-        }
     }
     
-    &--flex {
+    &__list {
+        max-width: 100%;
+        min-width: 0;
+    }
+    
+    &__item {
+        @include box-shadow;
+        background-color: #FFF;
+        border-radius: 1rem;
+        margin-bottom: 1rem;
         display: flex;
-        justify-content: space-between;
-        min-width: 0;   
+        overflow: hidden;
+        cursor: pointer;
+        animation: menuAppear 1s;
+        @for $i from 1 through 5 {
+            &:nth-child(#{$i}) {
+                animation-delay: 100ms * $i;
+            }
+        }
+        
+        .content, .price {
+            padding: 1rem;
+        }
+        
+        .content {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            
+            h4 {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+            
+            p {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+        }
         
         .price {
-            font-weight: bold;
-            margin-right: 1rem;
-            margin-top: 2.3rem;
+            margin-left: auto;
+            font-weight: 900;
+            display: flex;
+            align-items: flex-end;
+        }
+        
+        .selec {
+            width: 4rem;
+            background-color: $terciary-color;
+            color: #FFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: -4rem;
+            transition: margin-right 0.5s;
+        }
+        
+        &:hover .selec {
+            margin-right: 0;
+            
+            i {
+                animation: spinCheck 0.5s;
+            }
         }
     }
-    .meal-selec {
-        background-color: $terciary-color;
-        color: #FFF;
-        border-radius: 0 1rem 1rem 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-left: 1rem;
-        margin-right: -5rem;
-        width: 4rem;
-        height: 4.3rem;
-        padding: 0;
-        transition: all 0.5s;
-    }
+}
 
-    &:hover .meal-selec {
-        margin-left: 0;
-        margin-right: 0;
-
-        i {
-            animation: spinCheck 0.5s;
-        }
-    }
-}           
+// .menu__item {
+    //     max-width: 100%;
+    //     cursor: pointer;
+    //     background-color: #FFF;
+    //     border-radius: 1rem;
+    //     margin-bottom: 1rem;
+    //     display: flex;
+    //     overflow: hidden;
+    //     justify-content: space-between;
+    //     animation: menuAppear 1s;
+    //     @for $i from 1 through 3 {
+        //         &:nth-child(#{$i}) {
+            //             animation-delay: 100ms * $i;
+            //         }
+            //     }
+            //     @include box-shadow;   
+            
+            //     &--col {
+                //         flex-direction: column;
+                //         padding: 0.8rem 1rem;
+                
+                //         h4 {
+                    //             font-size: 1.1rem;
+                    //             margin-bottom: 0.2rem;
+                    //             white-space: nowrap;
+                    //             text-overflow: ellipsis;
+                    //             overflow: hidden;
+                    //         }
+                    
+                    //         .meal-desc {
+                        //             font-size: 1rem;
+                        //             white-space: nowrap;
+                        //             text-overflow: ellipsis;
+                        //             overflow: hidden;
+                        //         }
+                        //     }
+                        
+                        //     &--flex {
+                            //         display: flex;
+                            //         justify-content: space-between;
+                            //         min-width: 0;   
+                            
+                            //         .price {
+                                //             font-weight: bold;
+                                //             margin-right: 1rem;
+                                //             margin-top: 2.3rem;
+                                //         }
+                                //     }
+                                //     .meal-selec {
+                                    //         background-color: $terciary-color;
+                                    //         color: #FFF;
+                                    //         border-radius: 0 1rem 1rem 0;
+                                    //         display: flex;
+                                    //         align-items: center;
+                                    //         justify-content: center;
+                                    //         margin-left: 1rem;
+                                    //         margin-right: -5rem;
+                                    //         width: 4rem;
+                                    //         height: 4.3rem;
+                                    //         padding: 0;
+                                    //         transition: all 0.5s;
+                                    //     }
+                                    
+                                    //     &:hover .meal-selec {
+                                        //         margin-left: 0;
+                                        //         margin-right: 0;
+                                        
+                                        //         i {
+                                            //             animation: spinCheck 0.5s;
+                                            //         }
+                                            //     }
+                                            // }           

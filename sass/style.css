@@ -71,7 +71,7 @@
   box-sizing: border-box;
 }
 
-body, h1, h3, h4, p, figure {
+body, h1, h2, h3, h4, p, figure {
   margin: 0;
 }
 
@@ -121,6 +121,9 @@ body {
   counter-reset: order;
   scroll-behavior: smooth;
 }
+body h2 {
+  margin-bottom: 2rem;
+}
 
 .container {
   max-width: 1280px;
@@ -167,7 +170,6 @@ body {
   padding: 2.5rem 1rem;
 }
 #search h2 {
-  margin-top: 0;
   font-size: 1.7rem;
   font-weight: 900;
 }

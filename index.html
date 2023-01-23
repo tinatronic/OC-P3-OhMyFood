@@ -12,16 +12,16 @@
         <i class="fa-solid fa-spinner fa-4x fa-spin"></i>
     </div>
     <header id="header">
-        <img id="header__logo" src="./img/logo/ohmyfood@2x.svg">
+        <img id="header__logo" src="./img/logo/ohmyfood@2x.svg" alt="logo">
     </header>
     <main>
         <!-- Localisation Paris Belleville -->
-        <section id="location">
+        <div id="location">
             <i class="fa-solid fa-location-dot"></i><p>Paris, Belleville</p>
-        </section>
+        </div>
         <!-- Explorer -->
         <section id="search">
-            <h2>Réservez le menu qui</br>
+            <h2>Réservez le menu qui<br>
                 vous convient</h2>
                 <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
                 <button class="btn--gradient">Explorer nos restaurants</button>
@@ -44,7 +44,7 @@
                     <div class="cards__wrapper">
                         <!-- La palette du goût -->
                         <a href="pages/menu_01.html"><figure class="card">
-                            <img class="card__img" src="img/la-palette-du-gout.jpg">
+                            <img class="card__img" src="img/la-palette-du-gout.jpg" alt="la palette du goût">
                             <!-- Badge Nouveau -->
                             <span class="card__new">Nouveau</span>
                             <figcaption class="card__desc">
@@ -55,7 +55,7 @@
                         </figure></a>
                         <!-- La note enchantée -->
                         <a href="pages/menu_02.html"><figure class="card">
-                            <img class="card__img" src="img/la-note-enchantee.jpg">
+                            <img class="card__img" src="img/la-note-enchantee.jpg" alt="la note enchantée">
                             <!-- Badge Nouveau -->
                             <span class="card__new">Nouveau</span>
                             <figcaption class="card__desc">
@@ -66,7 +66,7 @@
                         </figure></a>
                         <!-- A la française -->
                         <a href="pages/menu_03.html"><figure class="card">
-                            <img class="card__img" src="img/a-la-francaise.jpg">
+                            <img class="card__img" src="img/a-la-francaise.jpg" alt="à la française">
                             <figcaption class="card__desc">
                                 <h3>À la française</h3>
                                 <p>Cité Rouge</p>
@@ -75,7 +75,7 @@
                         </figure></a>
                         <!-- Le délice des sens -->
                         <a href="pages/menu_04.html"><figure class="card">
-                            <img class="card__img" src="img/le-delice-des-sens.jpg">
+                            <img class="card__img" src="img/le-delice-des-sens.jpg" alt="le délice des sens">
                             <figcaption class="card__desc">
                                 <h3>Le délice des sens</h3>
                                 <p>Folie-Méricourt</p>
@@ -85,21 +85,19 @@
                     </div>
                 </div>
             </section>
-        </main>
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="container">
-                <h2>ohmyfood</h2>
-                <!-- Footer Navbar -->
-                <nav class="footer__menu">
-                    <li class="footer__item"><i class="fa-solid fa-utensils fa-sm"></i><a href="#">Proposer un restaurant</a></li>
-                    <li class="footer__item"><i class="fa-solid fa-handshake-angle fa-xs"></i></i><a href="#">Devenir partenaire</a></li>
-                    <li class="footer__item"><a href="#">Mention légales</a></li>
-                    <li class="footer__item"><a href="mailto:contact.omfparis@ohmyfood.com">Contact</a></li>
-                </nav>
-            </div>
-        </footer>
-    </main>
-    
-</body>
-</html>
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="container">
+                    <h2>ohmyfood</h2>
+                    <!-- Footer Navbar -->
+                    <ul class="footer__menu">
+                        <li class="footer__item"><i class="fa-solid fa-utensils fa-sm"></i><a href="#">Proposer un restaurant</a></li>
+                        <li class="footer__item"><i class="fa-solid fa-handshake-angle fa-xs"></i><a href="#">Devenir partenaire</a></li>
+                        <li class="footer__item"><a href="#">Mention légales</a></li>
+                        <li class="footer__item"><a href="mailto:contact.omfparis@ohmyfood.com">Contact</a></li>
+                    </ul>
+                </div>
+            </footer>
+        </main>    
+    </body>
+    </html>

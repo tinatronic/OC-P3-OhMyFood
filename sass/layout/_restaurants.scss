@@ -27,6 +27,7 @@
                 object-position: 50% 50%;
             }
             
+            //Badge Nouveau
             &__new {
                 background-color: $terciary-color;
                 border-radius: 0.2rem;
@@ -68,10 +69,7 @@
                 
                 i:hover::after {
                     opacity: 1;
-                }
-                
-                
-                
+                }    
             }
         }
     } 
